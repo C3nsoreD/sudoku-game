@@ -5,21 +5,24 @@ import SudokuBoard as sb
 
 
 class Game(object):
+    '''
+    This class defines the gmae logic. Gets a board and defines the start state
+    '''
 
     def __init__(self, boardfile):
         self.boardfile = boardfile
-        self.puzzle = sb.BoardGame(boardfile).board
-
+        self.puzzle = sb.BoardGame(boardfile).board #Stores the board game
+    
     def start(self):
         self.game_over = False
-        self._puzzle = []
+        self._puzzle = [] #Stores a copy of the board  
         for i in range(sb.BOARD_SIZE):
-            self._puzzle.append([]) # create an empty 2D matrix
+            self._puzzle.append([]) 
             for j in range(sb.BOARD_SIZE):
                 self._puzzle[i].append(self.puzzle[i][j])
 
-
     def check_win(self):
+        # tranveses through the rows and cols to check for uniqueness
         for row in range(sb.BOARD_SIZE):
             if not self.__check_row(row):
                 return False
@@ -28,6 +31,7 @@ class Game(object):
             if not self.__check_column(col):
                 return False
         
+        #Checks each 3x3 square for uniqueness
         for row in range(sb.BOARD_SIZE//3):
             for col in range(sb.BOARD_SIZE//3):
                 if not self.__check_square(row, col):
@@ -55,3 +59,6 @@ class Game(object):
             ]
         )
 
+
+def draw(boardfile):
+    
