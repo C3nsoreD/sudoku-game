@@ -2,8 +2,7 @@ from random import randint, seed
 
 BOARD_SIZE = 9
 """
-This module is responsible for creating the board game, 
-
+Creates a Sudoku board object from a loaded file.
 """
 
 class BoardGame(object):
