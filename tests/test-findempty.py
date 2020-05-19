@@ -31,13 +31,7 @@ def find_empty(boardfile):
     for i in range(len(boardfile)):
         for j in range(len(boardfile)):
             if boardfile[i][j] == 0:
-                empty_.append((i, j)) # returns all empty positions
-    
+                empty_.append((i, j)) # returns all empty positions    
     return empty_
 
-#TODO Create a model tha populates the empty spots with potential numbers
-
-
-
-
-print(find_empty(board))
+print(find_empty(board)) 
