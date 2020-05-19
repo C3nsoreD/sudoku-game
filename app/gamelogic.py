@@ -1,7 +1,7 @@
 '''
-Gabriel Ugolole. Sudoku solver v1 
+Sudoku v.1
 '''
-import SudokuBoard as sb
+import board as sb
 
 
 class Game(object):
