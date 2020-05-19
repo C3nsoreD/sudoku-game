@@ -1,5 +1,6 @@
 """
-Runs the game 
+Testing the board game generator that will generate board games for testing the solver algorithms. 
+
 """
 from .gamelogic import Game 
 from .sudokuboard import BoardGame
